@@ -11,4 +11,5 @@ jobs:
       uses: actions/checkout@v2
     - name: run checks
       run: echo " Running checkout code"
-    
+           ls -al
+           echo "Podemos usar varios commands en un solo run" 
