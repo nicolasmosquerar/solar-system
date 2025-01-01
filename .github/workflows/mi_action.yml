@@ -9,5 +9,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - run: echo " Running checkout code"
+    - name: run checks
+      run: echo " Running checkout code"
     
