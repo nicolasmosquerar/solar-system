@@ -39,8 +39,19 @@ jobs:
         name: Code Coverage
         runs-on: ubuntu-latest
         steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+
+          - name: Setup NodeJS Version
+            uses: actions/setup-node@v3
+            with:
+              node-version: 20
+
           - name: run coverage
-            run: npm run coverage
+            run: |
+              npm install 
+              npm run coverage
+
           - name: Archive coverage Result
             uses: actions/upload-artifact@v3
             with:
