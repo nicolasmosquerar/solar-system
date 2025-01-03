@@ -35,3 +35,15 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+    code-coverage:
+        name: Code Coverage
+        runs-on: ubuntu-latest
+        steps:
+          - name: run coverage
+            run: npm run coverage
+          - name: Archive coverage Result
+            uses: actions/upload-artifact@v3
+            with:
+              name: coverage-Test-Result
+              path: coverage-results.xml  
+    
