@@ -25,9 +25,17 @@ jobs:
           uses: actions/setup-node@v3
           with:
             node-version: 20
-        
+        - name: Set up cache
+          uses: actions/cache@v3
+          with:
+            path: node_modules
+            key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    
         - name: Install Dependencies
-          run: npm install
+          run: |
+                npm install mongoose@latest       
+                npm install
+
     
         - name: Unit Testing
           run: npm test
