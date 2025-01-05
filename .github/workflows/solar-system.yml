@@ -8,7 +8,7 @@ on:
       - 'feature/*'
 
 env:
-    MONGO_URI: ${{ secrets.MONGO_URI }}
+    MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData?authSource=admin&replicaSet=atlas-11b0vt-shard-0&ssl=true'
     MONGO_USERNAME: ${{ secrets.MONGO_USERNAME }}
     MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
     DOCKER_USERNAME: "nmosquerar"
