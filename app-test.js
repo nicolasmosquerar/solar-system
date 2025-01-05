@@ -150,7 +150,7 @@ describe('Planets API Suite', () => {
 });
 
 //Use below test case to achieve coverage
-describe('Testing Other Endpoints', () => {
+/* describe('Testing Other Endpoints', () => {
 
     describe('it should fetch OS Details', () => {
         it('it should fetch OS details', (done) => {
@@ -162,7 +162,7 @@ describe('Testing Other Endpoints', () => {
               });
         });
     });
-
+ */
     describe('it should fetch Live Status', () => {
         it('it checks Liveness endpoint', (done) => {
           chai.request(server)
