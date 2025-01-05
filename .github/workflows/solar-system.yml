@@ -32,10 +32,7 @@ jobs:
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
     
         - name: Install Dependencies
-          run: |
-                npm install mongoose@latest       
-                npm install
-
+          run: npm install
     
         - name: Unit Testing
           run: npm test
