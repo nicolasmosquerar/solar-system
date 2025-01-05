@@ -24,7 +24,7 @@ jobs:
         - name: Setup NodeJS Version
           uses: actions/setup-node@v3
           with:
-            node-version: 20
+            node-version: 18
         - name: Set up cache
           uses: actions/cache@v3
           with:
